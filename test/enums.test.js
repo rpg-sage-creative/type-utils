@@ -1,4 +1,4 @@
-import { tagLiterals, toLiteral } from "@rsc-utils/template-literal-utils";
+import { tagLiterals } from "@rsc-utils/template-literal-utils";
 import { getEnumKeys, getEnumValues, parseEnum } from "../build/index.js";
 
 describe("enums", () => {
@@ -10,13 +10,13 @@ describe("enums", () => {
 	})(DayNight || (DayNight = {}));
 
 	describe("getEnumValues", () => {
-		test(`getEnumValues(${toLiteral(DayNight)}) === [0,1]`, () => {
+		test(tagLiterals`getEnumValues(${DayNight}) === [0,1]`, () => {
 			expect(getEnumValues(DayNight)).toEqual([0,1]);
 		});
 	});
 
 	describe("getEnumKeys", () => {
-		test(`getEnumKeys(${toLiteral(DayNight)}) === ["Day","Night"]`, () => {
+		test(tagLiterals`getEnumKeys(${DayNight}) === ["Day","Night"]`, () => {
 			expect(getEnumKeys(DayNight)).toEqual(["Day","Night"]);
 		});
 	});

@@ -1,4 +1,4 @@
-import { tagLiterals, toLiteral } from "@rsc-utils/template-literal-utils";
+import { tagLiterals } from "@rsc-utils/template-literal-utils";
 import { omit } from "../build/index.js";
 
 describe("omit", () => {

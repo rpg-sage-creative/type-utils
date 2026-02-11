@@ -1,4 +1,4 @@
-import { toLiteral } from "@rsc-utils/template-literal-utils";
+import { tagLiterals } from "@rsc-utils/template-literal-utils";
 import { isBigInt, isBoolean, isDefined, isFiniteNumber, isNull, isNullOrUndefined, isNumber, isNumeric, isPrimitive, isString, isUndefined } from "../build/index.js";
 
 describe("typeGuards", () => {
@@ -39,7 +39,7 @@ describe("typeGuards", () => {
 	functions.forEach(fn => {
 		describe(fn.name, () => {
 			tests.forEach(testData => {
-				test(`${fn.name}(${toLiteral(testData.value)}) === ${testData[fn.name]}`, () => {
+				test(tagLiterals`${fn.name}(${testData.value}) === ${testData[fn.name]}`, () => {
 					expect(fn(testData.value)).toBe(testData[fn.name]);
 				});
 			});
