@@ -1,6 +1,8 @@
 
 /** Make all properties in T type Optional */
-export type Args<T> = { [P in keyof T]?: Optional<T[P]>; };
+export type Args<T> = {
+	[P in keyof T]?: Optional< Exclude< T[P], null | undefined > >;
+};
 
 /** Represents an object or a promise to get that object. */
 export type Awaitable<T> = T | PromiseLike<T>;
