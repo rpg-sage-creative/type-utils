@@ -8,6 +8,7 @@ export * from "./isNullOrUndefined.js";
 export * from "./isNumber.js";
 export * from "./isNumeric.js";
 export * from "./isPrimitive.js";
+export * from "./isSimpleObject.js";
 export * from "./isString.js";
 export * from "./isUndefined.js";
 export * from "./isWholeNumberString.js";
