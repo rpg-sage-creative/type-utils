@@ -1,7 +1,4 @@
-const wholeNumberRegex = /^\d+$/;
+const WholeNumberRegExp = /^\d+$/;
 export function isWholeNumberString(value) {
-    if (typeof (value) === "string") {
-        return wholeNumberRegex.test(value);
-    }
-    return false;
+    return typeof (value) === "string" && WholeNumberRegExp.test(value);
 }
