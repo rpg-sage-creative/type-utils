@@ -1,4 +1,5 @@
 export * from "./enums/index.js";
+export * from "./errors/index.js";
 export * from "./typeGuards/index.js";
 export * from "./applyMixins.js";
 export * from "./deepFreeze.js";
