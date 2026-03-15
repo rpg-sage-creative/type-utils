@@ -5,6 +5,7 @@ export * from "./applyMixins.js";
 export * from "./deepFreeze.js";
 export * from "./generics.js";
 export * from "./Matcher.js";
+export * from "./noop.js";
 export * from "./omit.js";
 export * from "./Saveable.js";
 export * from "./TypedRegExp.js";
